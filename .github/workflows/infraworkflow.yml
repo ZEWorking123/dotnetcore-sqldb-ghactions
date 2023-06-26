@@ -21,6 +21,9 @@ jobs:
   build-and-deploy-to-dev:
     runs-on: ubuntu-latest
     steps:
+      - name: Set up Azure CLI
+        uses: azure/setup-az-cli@v1
+      
       - name: Azure Login with Service Principal
         uses: azure/login@v1
         with:
